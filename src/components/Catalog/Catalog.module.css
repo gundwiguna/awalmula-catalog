@@ -1,0 +1,39 @@
+.productCard {
+    border: 1px solid rgba(150, 200, 150, 0.3)!important;
+    box-shadow: rgb(0 0 0 / 12%) 0px 1px 6px 0px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.productCard .productName {
+    font-size: 0.75rem;
+}
+
+.productCard .productPrice,
+.productCard .productBrand {
+    font-size: 0.85rem;
+}
+
+.productCard .productWarehouse {
+    font-size: 0.65rem;
+}
+
+.productImgContainer {
+    background-color: #fefffe;
+}
+
+.likeButton {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 1rem;
+    background-color: #ddd;
+    font-size: 0.95rem;
+    cursor: pointer;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+.icon {
+    color: #779977;
+}
