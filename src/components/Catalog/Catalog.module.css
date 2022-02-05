@@ -1,12 +1,14 @@
 .productCard {
     border: 1px solid rgba(150, 200, 150, 0.3)!important;
     box-shadow: rgb(0 0 0 / 12%) 0px 1px 6px 0px;
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .productCard .productName {
     font-size: 0.75rem;
+    color: #779977;
 }
 
 .productCard .productPrice,
@@ -15,7 +17,7 @@
 }
 
 .productCard .productWarehouse {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
 }
 
 .productImgContainer {
@@ -32,6 +34,7 @@
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
+    z-index: 10;
 }
 
 .icon {

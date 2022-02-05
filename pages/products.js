@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import ProductCard from "../src/components/Catalog/ProductCard";
 
-export default () => {
+const Products = () => {
     const pageSize = 10,
         [products, setProducts] = useState([]),
         [pageNumber, setPageNumber] = useState(1),
@@ -11,6 +11,7 @@ export default () => {
 
     useEffect(() => {
         loadProducts();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     function loadProducts (pageNum = 1) {
@@ -54,3 +55,5 @@ export default () => {
         </div>
     );
 }
+
+export default Products;

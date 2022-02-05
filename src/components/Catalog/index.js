@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import ProductCard from "./ProductCard";
 
-export default ({predefinedProducts, predefinedProductsUrl}) => {
+const Catalog = ({predefinedProducts, predefinedProductsUrl}) => {
     const pageSize = 10,
         [products, setProducts] = useState(predefinedProducts || []),
         [pageNumber, setPageNumber] = useState(1),
@@ -12,6 +12,7 @@ export default ({predefinedProducts, predefinedProductsUrl}) => {
         if (!predefinedProducts) {
             loadProducts();
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
@@ -61,3 +62,5 @@ export default ({predefinedProducts, predefinedProductsUrl}) => {
         </div>
     );
 }
+
+export default Catalog;

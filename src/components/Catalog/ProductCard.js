@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState } from "react";
 import { Col } from "react-bootstrap";
 import s from './Catalog.module.css';
@@ -39,15 +40,15 @@ const ProductCard  = (props) => {
         <Col xs={6} md={4} lg={3} className="p-2">
             <div className={`${s.productCard} position-relative`}>
                 <LikeButton />
-                <div className={`p-4 d-flex justify-content-center align-items-center ${s.productImgContainer}`} style={{minHeight: '10rem'}}>
-                    {imgUrl && <img className="w-100 img-fluid" src={imgUrl} />}
+                <div className={`px-0 px-md-3 d-flex justify-content-center align-items-center position-relative ${s.productImgContainer}`} style={{minHeight: '10rem'}}>
+                    {imgUrl && <Image layout="intrinsic" width={260} height={260} objectFit alt={`product-${product.sku}`} className="w-100 img-fluid" src={imgUrl} />}
                     {!imgUrl && (<div>
                         <i className="bi-box2-heart text-success" style={{fontSize: '4rem'}} /></div>
                         )}
                 </div>
                 <div className="p-2">
                     <div className={`${s.productName}`}>{product.name || product.sku}</div>
-                    <div className={`${s.productBrand} fw-bold`}>{brand}</div>
+                    <div className={`${s.productBrand} text-muted fw-bold`}>{brand}</div>
                     <div className={`${s.productWarehouse}`}>{warehouseData.city}</div>
                     <div className={`${s.productPrice} text-danger fw-bold`}>{price}</div>
                 </div>
